@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+
+    @model IEnumerable<String>
+    }
+<div class="container">
+
+    <div class="table">
+        <div class="table-header">
+            <div class="header__item">Course </div>
+
+        </div>
+        <div class="table-content">
+            
+             @foreach (String s in Model)
+                {
+
+
+
+                        <div class="table-row">
+                                        <a href="Course/getcourse/@s"><div class="table-data">@s</div> </a>
+                        </div>
+
+                }
+                </div>
+            </div>
+  </div>
+
+

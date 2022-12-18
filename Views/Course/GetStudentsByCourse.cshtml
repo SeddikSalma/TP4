@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "GetStudentsByCourse";
+
+    @model IEnumerable<TP4.Models.Student>
+}
+
+@{
+    if (Model.Count() <= 0)
+    {
+        <h2 class="alert alert-warning">No students found </h2>
+    }
+    else
+
+    {
+        <h1>@ViewBag.Id</h1>
+        <div class="container">
+
+            <div class="table">
+                <div class="table-header">
+                    <div class="header__item">Student name</div>
+                    <div class="header__item"> Last name</div>
+                    <div class="header__item">University </div>
+                </div>
+                <div class="table-content">
+
+                    @foreach (var student in Model)
+                    {
+                        <div class="table-row">
+                            @student.first_name
+                        </div>
+                        <div class="table-row">
+                            @student.last_name
+                        </div>
+                        <div class="table-row">
+                            @student.university
+                        </div>
+
+                    }
+                </div>
+            </div>
+        </div>
+    }
+}
